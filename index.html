@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi-Fi Festival</title>
+  <link rel="stylesheet" href="./css/globals.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <header class="Header">
+    <div class="Header__logo">
+      <img class="logo__img" src="./assets/images/logo.svg" alt="hifi logo">
+      <h1 class="logo_text"></h1>
+    </div>
+    <nav class="Navbar">
+      <ul class="Navbar__container">
+        <li class="Navbar__item">Artists</li>
+        <li class="Navbar__item">PlayList</li>
+        <li class="Navbar__item">Pricing</li>
+        <li class="Navbar__item">Tickets</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="Section Hero">
+      <div class="Hero__background"></div>
+      <div class="Hero__info">
+        <div class="Hero__info"></div>
+        <h1 class="Hero__title">Feel the sound</h1>
+      </div>
+    </section>
+
+    <section class="Section ">
+      <h2 class="Section__title">About HiFi Festival</h2>
+      <div class="Section__divider">
+        <div class="Section__item">
+          <p class="Section__text">The <Strong>HiFi Festival</Strong> is the most important festival of hifi music in
+            latam, it get the 20 mos important artist of the century, hifi festival is looking for the performance of
+            each artist.</p>
+            <h3 class="Section__subtitle">What is <strong>genres</strong>?</h3>
+            <ul class="Section__list">
+              <li class="Section__list__item">Indie</li>
+              <li class="Section__list__item">Rap</li>
+              <li class="Section__list__item">Hip-Hop</li>
+              <li class="Section__list__item">Pop</li>
+              <li class="Section__list__item">RnB</li>
+              <li class="Section__list__item">Chill</li>
+            </ul>
+        </div>
+        <div class="Section_item">
+          <h3 class="Section__subtitle">When and Where?</h3>
+          <p class="Section__text">Lago Calima </p>
+          <p class="Section__text">19 de Junio del 2022 </p>
+          <div class="Section__Map"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Section">
+      <h2 class="Section__title">Our Artists</h2>
+      <div class="Section__slider">
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Kanye West</p>
+        </div>
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Frank Ocean</p>
+        </div>
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Tyler The Creator</p>
+        </div>
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Bad Bunny</p>
+        </div>
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Mora</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="Section">
+      <h2 class="Section_title">PlayList</h2>
+      <div class="Playlist__container">
+        <div class="Playlist__animation"></div>
+        <div class="PlayList"></div>
+      </div>
+    </section>
+    <section class="Section">
+      <h2 class="Section__title">Pricing</h2>
+      <div class="Princing__container">
+        <div class="Pricing__item">
+          <h3 class="Pricing__title"></h3>
+          <h3 class="Pricing__price"></h3>
+        </div>
+        <div class="Pricing__item">
+          <h3 class="Pricing__title"></h3>
+          <h3 class="Pricing__price"></h3>
+        </div>
+        <div class="Pricing__item">
+          <h3 class="Pricing__title"></h3>
+          <h3 class="Pricing__price"></h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="Section">
+      <h2 class="Section__title">Get Tickets</h2>
+      <form class="Form__container" action="./success.html" method="post">
+        <label class="Form__label" for="name">Full Name:</label>
+        <input class="Form__intput" type="text" name="name" placeholder="Daniel">
+        <label class="Form__label" for="email">Email:</label>
+        <input class="Form__intput" type="email" name="email" placeholder="yourname@mail.co">
+        <label class="Form__label" for="tel">Tel:</label>
+        <input class="Form__intput" type="tel" name="tel" placeholder="+00 00000000" pattern="[+]{1}[0-9]{11,14}" required>
+        <label class="Form__label" for="type">Ticket:</label>
+        <select name="type" class="Form__select">
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+          <option value="Platinum">Platinum</option>
+        </select>
+        <input class="Form__buttom" type="button" value="RESERVE NOW">
+      </form>
+    </section>
+
+    <section class="Section">
+      <h3 class="Section__title">Sponsors</h3>
+      
+      <div class="Section__slider">
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Apple</p>
+        </div>
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Vercel</p>
+        </div>
+        <div class="Slider__item">
+          <img src="" alt="" class="Slider__img">
+          <p class="Slider__text">Platzi</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="Footer">
+
+  </footer>
+</body>
+
+</html>
