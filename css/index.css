@@ -31,9 +31,7 @@
   color: var(--white);
   z-index: 1;
 }
-.Hero__animation{
 
-}
 .Hero__title{
   font-size:9.6rem ;
   line-height: 75.5%;
@@ -258,4 +256,10 @@ background-color: transparent;
 box-shadow: none;
 border-radius: 0;
 width: 120px;
+}
+.Sponsor{
+  max-width: 90%;
+}
+.Sponsor .Slider__container{
+  overflow-x:scroll;
 }
