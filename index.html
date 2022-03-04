@@ -5,8 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="./favicon.ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicon.ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicon.ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicon.ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicon.ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicon.ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicon.ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicon.ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon.ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon.ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon.ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon.ico/favicon-16x16.png">
+  <link rel="manifest" href="./favicon.ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <title>Hi-Fi Festival</title>
-  <link rel="stylesheet" href="./css/globals.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -14,23 +30,37 @@
   <header class="Header">
     <div class="Header__logo">
       <img class="logo__img" src="./assets/images/logo.svg" alt="hifi logo">
-      <h1 class="logo_text"></h1>
+      <h1 class="logo_text">HiFi <br>Festival</h1>
     </div>
     <nav class="Navbar">
       <ul class="Navbar__container">
-        <li class="Navbar__item">Artists</li>
-        <li class="Navbar__item">PlayList</li>
-        <li class="Navbar__item">Pricing</li>
-        <li class="Navbar__item">Tickets</li>
+        <li class="Navbar__item">
+          <a href="./index.html#artist">Artists</a>
+        </li>
+        <li class="Navbar__item"><a href="./index.html#playlist">PlayList</a></li>
+        <li class="Navbar__item"><a href="./index.html#pricing">Pricing</a></li>
+        <li class="Navbar__item"><a href="./index.html#tickets">Tickets</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section class="Section Hero">
-      <div class="Hero__background"></div>
+      <div class="Hero__background">
+        <video autoplay muted playsinline loop>
+          <source src="./assets/videos/banner_video.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div class="Hero__info">
-        <div class="Hero__info"></div>
-        <h1 class="Hero__title">Feel the sound</h1>
+        <div class="Hero__animation playing">
+          <span class="bar n1">A</span>
+          <span class="bar n8">B</span>
+          <span class="bar n3">c</span>
+          <span class="bar n4">D</span>
+          <span class="bar n5">E</span>
+          <span class="bar n7">F</span>
+
+        </div>
+        <h1 class="Hero__title">Feel the <br>sound</h1>
       </div>
     </section>
 
@@ -41,116 +71,202 @@
           <p class="Section__text">The <Strong>HiFi Festival</Strong> is the most important festival of hifi music in
             latam, it get the 20 mos important artist of the century, hifi festival is looking for the performance of
             each artist.</p>
-            <h3 class="Section__subtitle">What is <strong>genres</strong>?</h3>
-            <ul class="Section__list">
-              <li class="Section__list__item">Indie</li>
-              <li class="Section__list__item">Rap</li>
-              <li class="Section__list__item">Hip-Hop</li>
-              <li class="Section__list__item">Pop</li>
-              <li class="Section__list__item">RnB</li>
-              <li class="Section__list__item">Chill</li>
-            </ul>
+          <div class="Section__spacer"></div>
+          <p class="Section__text">We have a parking and food zone</p>
+          <div class="Section__spacer"></div>
+          <h3 class="Section__subtitle">What is <strong>genres</strong>?</h3>
+          <ul class="Section__list">
+            <li class="Section__list__item">Indie</li>
+            <li class="Section__list__item">Rap</li>
+            <li class="Section__list__item">Hip-Hop</li>
+            <li class="Section__list__item">Pop</li>
+            <li class="Section__list__item">RnB</li>
+            <li class="Section__list__item">Chill</li>
+            <li class="Section__list__item">Reggaeton</li>
+            <li class="Section__list__item">Trap</li>
+          </ul>
         </div>
         <div class="Section_item">
-          <h3 class="Section__subtitle">When and Where?</h3>
-          <p class="Section__text">Lago Calima </p>
+          <h3 class="Section__subtitle"><strong>When and Where</strong>?</h3>
+          <div class="Section__spacer"></div>
           <p class="Section__text">19 de Junio del 2022 </p>
-          <div class="Section__Map"></div>
+          <div class="Section__Map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5204.2899536964005!2d-76.52720863673751!3d3.3480913851412706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a1be4e844067%3A0x750a7b7b1c1ce81b!2sAutocine%20Piedra%20Grande!5e0!3m2!1sen!2sco!4v1646396291575!5m2!1sen!2sco"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="Section">
+    <section class="Section Slider" id="artist">
       <h2 class="Section__title">Our Artists</h2>
-      <div class="Section__slider">
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Kanye West</p>
-        </div>
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Frank Ocean</p>
-        </div>
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Tyler The Creator</p>
-        </div>
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Bad Bunny</p>
-        </div>
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Mora</p>
+      <div class="Slider__container">
+
+        <div class="Section__slider">
+          <div class="Slider__item">
+            <img src="./assets/images/artists/kanye.jpeg" alt="kanye face image" class="Slider__img">
+            <p class="Slider__text">Kanye West</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/artists/frank.jpeg" alt="frank ocean image" class="Slider__img">
+            <p class="Slider__text">Frank Ocean</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/artists/badbunny.jpeg" alt="bad Bunny face image" class="Slider__img">
+            <p class="Slider__text">Bad Bunny</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/artists/mora.jpeg" alt="Mora Face Image" class="Slider__img">
+            <p class="Slider__text">Mora</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/artists/ctangana.jpeg" alt="Tyler Face Smiling" class="Slider__img">
+            <p class="Slider__text">C.Tangana</p>
+          </div>
         </div>
       </div>
+      <h3 class="Section__subtitle">And much more like</h3>
+      <ul class="Section__list">
+        <li class="Section__list__item">Wiz Khalifa</li>
+        <li class="Section__list__item">Tyler The Creator</li>
+        <li class="Section__list__item">Drake</li>
+        <li class="Section__list__item">Arcangel</li>
+        <li class="Section__list__item">Eladio Carrion</li>
+        <li class="Section__list__item">Alizzz</li>
+        <li class="Section__list__item">Kase O.</li>
+        <li class="Section__list__item">Duki</li>
+        <li class="Section__list__item">Trueno</li>
+        <li class="Section__list__item">Jhay Cortez</li>
+      </ul>
+
     </section>
 
-    <section class="Section">
-      <h2 class="Section_title">PlayList</h2>
+    <section class="Section" id="playlist">
+      <h2 class="Section__title">PlayList</h2>
       <div class="Playlist__container">
         <div class="Playlist__animation"></div>
-        <div class="PlayList"></div>
+        <div class="Playlist__animation circle2"></div>
+
+        <div class="PlayList">
+          <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/1MmGFc1vZRqamgyvroE7Wp?utm_source=generator&theme=0"
+            width="100%" height="600" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
       </div>
     </section>
-    <section class="Section">
+    <section class="Section Pricing" id="pricing">
       <h2 class="Section__title">Pricing</h2>
       <div class="Princing__container">
         <div class="Pricing__item">
-          <h3 class="Pricing__title"></h3>
-          <h3 class="Pricing__price"></h3>
+          <h3 class="Pricing__title">Standard</h3>
+          <p class="Pricing__text">All stages access</p>
+          <h3 class="Pricing__price">$200usd</h3>
         </div>
         <div class="Pricing__item">
-          <h3 class="Pricing__title"></h3>
-          <h3 class="Pricing__price"></h3>
+          <h3 class="Pricing__title">VIP</h3>
+          <div class="Pricing__info">
+
+            <p class="Pricing__text">All stages access</p>
+            <p class="Pricing__text">Exclusive front seats</p>
+          </div>
+          <h3 class="Pricing__price">$500usd</h3>
         </div>
         <div class="Pricing__item">
-          <h3 class="Pricing__title"></h3>
-          <h3 class="Pricing__price"></h3>
+          <h3 class="Pricing__title">Platinium</h3>
+          <div class="Pricing__info">
+
+            <p class="Pricing__text">All stages access</p>
+            <p class="Pricing__text">Exclusive front seats</p>
+            <p class="Pricing__text">Exclusive <strong>meet & greet</strong> </p>
+          </div>
+          <h3 class="Pricing__price">$900usd</h3>
         </div>
       </div>
     </section>
 
-    <section class="Section">
+    <section class="Section" id="tickets">
       <h2 class="Section__title">Get Tickets</h2>
       <form class="Form__container" action="./success.html" method="post">
         <label class="Form__label" for="name">Full Name:</label>
-        <input class="Form__intput" type="text" name="name" placeholder="Daniel">
+        <input class="Form__intput" type="text" name="name" placeholder="Daniel" required>
+
         <label class="Form__label" for="email">Email:</label>
-        <input class="Form__intput" type="email" name="email" placeholder="yourname@mail.co">
+        <input class="Form__intput" type="email" name="email" placeholder="yourname@mail.co" required>
+
         <label class="Form__label" for="tel">Tel:</label>
-        <input class="Form__intput" type="tel" name="tel" placeholder="+00 00000000" pattern="[+]{1}[0-9]{11,14}" required>
+        <input class="Form__intput" type="tel" name="tel" placeholder="+00 00000000" pattern="[+]{1}[0-9]{11,14}"
+          required>
         <label class="Form__label" for="type">Ticket:</label>
-        <select name="type" class="Form__select">
+        <select name="type" class="Form__select" required>
           <option value="standard">Standard</option>
           <option value="vip">VIP</option>
           <option value="Platinum">Platinum</option>
         </select>
-        <input class="Form__buttom" type="button" value="RESERVE NOW">
+        <label class="Form__label" for="quantity">Quantity:</label>
+        <input class="Form__intput" type="number" name="quantity" value="2" required>
+        <button class="Form__buttom">Reserve Now</button>
       </form>
     </section>
 
-    <section class="Section">
+    <section class="Section Sponsor">
       <h3 class="Section__title">Sponsors</h3>
-      
-      <div class="Section__slider">
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Apple</p>
-        </div>
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Vercel</p>
-        </div>
-        <div class="Slider__item">
-          <img src="" alt="" class="Slider__img">
-          <p class="Slider__text">Platzi</p>
+      <div class="Slider__container">
+
+
+        <div class="Section__slider">
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_1.svg" alt="apple logo" class="Slider__img">
+            <p class="Slider__text">Apple</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_2.svg" alt="Tesla logo" class="Slider__img">
+            <p class="Slider__text">Tesla</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_3.svg" alt="Vercel logo" class="Slider__img">
+            <p class="Slider__text">Vercel</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_4.png" alt="Platzi logo" class="Slider__img">
+            <p class="Slider__text">Platzi</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_5.png" alt="Github logo" class="Slider__img">
+            <p class="Slider__text">Github</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_6.png" alt="Twitter logo" class="Slider__img">
+            <p class="Slider__text">Twitter</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_7.png" alt="Y-Combinator logo" class="Slider__img">
+            <p class="Slider__text">YC</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_8.png" alt="Globant logo" class="Slider__img">
+            <p class="Slider__text">Globant</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_9.png" alt="Spotify logo" class="Slider__img">
+            <p class="Slider__text">Spotify</p>
+          </div>
+          <div class="Slider__item">
+            <img src="./assets/images/sponsors/sponsor_logo_10.png" alt="UAO logo" class="Slider__img">
+            <p class="Slider__text">UAO</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
   <footer class="Footer">
-
+    <img class="logo__img" src="./assets/images/logo.svg" alt="hifi logo">
+    <h3 class="Section__title"> RASEC S.A.S</h3>
+    <h2 class="Section__subtitle">
+      Copyright 2022®
+    </h2>
+    <h3 class="Section__subtitle">Develop by <a href="https://github.com/jcamiloguz" class="socialLink">@jcamiloguz</a></h3>
   </footer>
 </body>
 

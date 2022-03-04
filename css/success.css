@@ -1,0 +1,24 @@
+@import url(./globals.css);
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./animations/pulse.css);
+@import url(./animations/circle.css);
+
+
+ .back__button{
+  width: 400px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 5px;
+  border: solid 2px var(--black);
+  transition: all .2s;
+  margin-top: 40px;
+  }
+  .back__button:hover{
+    background-color: var(--black);
+    color: var(--white);
+  }
