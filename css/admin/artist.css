@@ -1,0 +1,65 @@
+@import url(../globals.css);
+@import url(../header.css);
+@import url(../footer.css);
+@import url(./adminGlobals.css);
+
+
+.Artist__title{
+  text-align: left;
+}
+.Artist__item{
+  width: 90%;
+  margin: 3rem auto;
+  box-shadow: var(--shadow2);
+  display: flex;
+  border-radius: 3rem;
+  font-weight: 500;
+  color: var(--black);
+  overflow: hidden;
+}
+.Artist__item__img{
+  aspect-ratio: 1/1;
+  background-color: var(--empty);
+  overflow: hidden;
+  width: 25%;
+  object-fit: cover;
+
+}
+.Artist__item__info{
+  width: 50%;
+  list-style-type: none;
+  padding: 1rem 1rem;
+}
+.Artist__item__title{
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+.Artist__item__genere{
+    font-size: 2rem;
+}
+.Artist__item__description{
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Artist__item__icons{
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10px;
+
+}
+.Artist__item__icons span{
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+.Artist__item__edit{
+  color: var(--blue);
+}
+.Artist__item__delete{
+  color: var(--red);
+}
+

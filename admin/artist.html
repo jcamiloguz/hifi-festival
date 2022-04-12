@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="../favicon.ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../favicon.ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../favicon.ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../favicon.ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../favicon.ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../favicon.ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../favicon.ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../favicon.ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon.ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../favicon.ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon.ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon.ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon.ico/favicon-16x16.png">
+  <link rel="manifest" href="../favicon.ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Edit Artists List</title>
+  <link rel="stylesheet" href="../css/admin/artist.css">
+</head>
+
+<body>
+  <header class="Header">
+    <div class="Header__logo">
+      <img class="logo__img" src="../assets/images/logo.svg" alt="hifi logo">
+      <h1 class="logo_text">HiFi <br>Festival</h1>
+    </div>
+   
+    <div class="Header__dropdown__container">
+      <div class="Header__dropdown__label">
+        <p>Admin Name <span class="material-icons">expand_more</span></p>
+      </div>
+      <div class="Header__dropdown__item">
+        <a href="./login.html"><span class="material-icons"><span class="material-icons">
+              power_settings_new
+            </span></span>LogOut</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="Section Section--list">
+      <a class="Buttton__back" href="javascript:history.back()">
+        <span class="material-icons">
+          arrow_back_ios_new
+        </span>
+        <span>Back</span>
+      </a>
+      <h1 class="Section__title Artist__title">EDITING ARTIST LIST</h1>
+
+      <div class="Button__add">
+        <span class="material-icons">
+          add_circle_outline
+        </span>
+      </div>
+      <div class="Item__list">
+        <div class="Artist__item">
+          <img class="Artist__item__img"src="https://indiehoy.com/wp-content/uploads/2019/11/wos-la-nueva-generacion-17-noviembre-2019-agus-luna-castro-indie-hoy98.jpg" alt="">
+          <ul class="Artist__item__info">
+            <li class="Artist__item__title">WOS</li>
+            <li class="Artist__item__genere">Rap</li>
+            <li class="Artist__item__description">Description</li>
+          </ul> 
+          <div class="Artist__item__icons">
+            <span class="material-icons Artist__item__edit">
+              edit
+              </span>
+            <span class="material-icons Artist__item__delete">
+              delete
+              </span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>

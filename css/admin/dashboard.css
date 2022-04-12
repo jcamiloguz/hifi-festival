@@ -1,0 +1,41 @@
+@import url(../globals.css);
+@import url(../header.css);
+@import url(../footer.css);
+@import url(./adminGlobals.css);
+
+.Section__button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Button__dashboard {
+  width: 100%;
+  margin-bottom: 3rem;
+  max-width: 47.5rem;
+  box-shadow: var(--shadow2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+.Button__dashboard:first-child{
+    margin-top:3.8rem;
+}
+
+.Button__img {
+  aspect-ratio: 1/1;
+  background-color: var(--empty);
+  overflow: hidden;
+  width: 25%;
+  object-fit: cover;
+}
+.Dashboard__container .material-icons {
+  font-size: 4.8rem;
+  color: var(--blue);
+}

@@ -1,0 +1,15 @@
+@import url(../globals.css);
+@import url(../header.css);
+@import url(../footer.css);
+@import url(./adminGlobals.css);
+
+
+
+.Login__form{
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
+

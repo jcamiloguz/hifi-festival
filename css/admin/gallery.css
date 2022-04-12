@@ -1,0 +1,48 @@
+@import url(../globals.css);
+@import url(../header.css);
+@import url(../footer.css);
+@import url(./adminGlobals.css);
+
+.Gallery__item{
+  width: 90%;
+  margin: 3rem auto;
+  box-shadow: var(--shadow2);
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  font-weight: 500;
+  color: var(--black);
+  overflow: hidden;
+}
+.Gallery__item__img{
+aspect-ratio: 16/9; 
+background-color: var(--empty);
+
+  object-fit: cover;
+}
+.Gallery__item__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.Gallery__item__title{
+    font-size: 3rem;
+}
+.Gallery__item__icons{
+    width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.Gallery__item__icons span{
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+.Gallery__item__edit{
+  color: var(--blue);
+}
+.Gallery__item__delete{
+  color: var(--red);
+}
+/*MODAL*/

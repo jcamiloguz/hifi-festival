@@ -1,0 +1,141 @@
+main{
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.Navbar{
+  visibility: hidden;
+}
+.Header__dropdown__container{
+  position: relative;
+  font-size: 2.4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+.Header__dropdown__label p{
+  display: flex;
+  align-items: center;
+}
+.Header__dropdown__item{
+  visibility: hidden;
+  position: absolute;
+  top: 5.7rem;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 0px 0px 1rem 1rem;
+  padding: 2rem 3rem;
+  z-index: 1;
+  right: 0;
+  opacity:0;
+  transition: .25s all ease-in-out; 
+  
+}
+.Header__dropdown__container:hover .Header__dropdown__item{
+  visibility: visible;
+  opacity:1;
+}
+.Header__dropdown__item a{
+  display: flex;
+  align-items: flex-end;
+  color:var(--red)
+}
+.Dashboard__container{
+  background-color: var(--white);
+  min-height: 37rem; 
+  border-radius: 3rem;
+  box-shadow: var(--shadow2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+  max-width: 67rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Button--primary{
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 2.4rem;
+  max-width: 39rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.0rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Input{
+  width: 100%;
+  margin: 1.4rem 0 1.4rem 0;
+  border-radius: 0.5rem;
+  padding: 1.0rem;
+  font-size: 2.0rem;
+  background-color: var(--empty);
+  border: solid 2px var(--black);
+  padding-left: 4rem;
+}
+
+.Input__container{
+  width: 100%;
+  position: relative;
+}
+.Input__icon{
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.Buttton__back{
+  display: flex;
+  align-items:center;
+  font-size: 3rem;
+  color: var(--blue);
+  font-weight: bold;
+  width: fit-content;
+  
+  
+}
+.Buttton__back span:first-child{
+  font-size: 3rem;
+}
+.Buttton__back span:last-child{
+  transition: .3s all ease-in-out;
+  text-decoration: underline;
+  text-decoration-color:transparent ;
+}
+.Buttton__back:hover span:last-child{
+  text-decoration-color:var(--blue);
+}
+
+.Section--list{
+  max-width: 55rem;
+  min-height: 80vh;
+}
+.Button__add{
+  width: 90%;
+  height: 12rem;
+  margin: 3rem auto;
+  box-shadow: var(--shadow2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--blue);
+}
+.Button__add span{
+  font-size: 5rem;
+}
+.Item__list{
+  overflow-y: scroll; 
+}
+
