@@ -3,7 +3,7 @@
 @import url(../footer.css);
 @import url(./adminGlobals.css);
 
-.Gallery__item{
+.Gallery__item {
   width: 90%;
   margin: 3rem auto;
   box-shadow: var(--shadow2);
@@ -14,35 +14,70 @@
   color: var(--black);
   overflow: hidden;
 }
-.Gallery__item__img{
-aspect-ratio: 16/9; 
-background-color: var(--empty);
+
+.Gallery__item__img {
+  aspect-ratio: 16/9;
+  background-color: var(--empty);
 
   object-fit: cover;
 }
-.Gallery__item__info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+
+.Gallery__item__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
-.Gallery__item__title{
-    font-size: 3rem;
+
+.Gallery__item__title {
+  font-size: 3rem;
 }
-.Gallery__item__icons{
-    width: 25%;
+
+.Gallery__item__icons {
+  width: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.Gallery__item__icons span{
-    font-size: 3.5rem;
-    cursor: pointer;
+
+.Gallery__item__icons span {
+  font-size: 3.5rem;
+  cursor: pointer;
 }
-.Gallery__item__edit{
+
+.Gallery__item__edit {
   color: var(--blue);
 }
-.Gallery__item__delete{
+
+.Gallery__item__delete {
   color: var(--red);
 }
-/*MODAL*/
+
+.Image__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.image__viewer {
+  border-radius: 3rem;
+  width: 90%;
+  aspect-ratio: 16/9;
+  margin-bottom: 1.8rem;
+  box-shadow: var(--shadow2);
+}
+
+::-webkit-file-upload-button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  font-size: 2.4rem;
+  max-width: 39rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.0rem;
+  font-weight: bold;
+  cursor: pointer;
+}

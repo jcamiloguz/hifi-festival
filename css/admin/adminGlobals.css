@@ -1,4 +1,4 @@
-main{
+main {
   height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
@@ -6,10 +6,11 @@ main{
   margin-top: 60px;
 }
 
-.Navbar{
+.Navbar {
   visibility: hidden;
 }
-.Header__dropdown__container{
+
+.Header__dropdown__container {
   position: relative;
   font-size: 2.4rem;
   height: 100%;
@@ -18,11 +19,13 @@ main{
   cursor: pointer;
 
 }
-.Header__dropdown__label p{
+
+.Header__dropdown__label p {
   display: flex;
   align-items: center;
 }
-.Header__dropdown__item{
+
+.Header__dropdown__item {
   visibility: hidden;
   position: absolute;
   top: 5.7rem;
@@ -32,22 +35,25 @@ main{
   padding: 2rem 3rem;
   z-index: 1;
   right: 0;
-  opacity:0;
-  transition: .25s all ease-in-out; 
-  
+  opacity: 0;
+  transition: .25s all ease-in-out;
+
 }
-.Header__dropdown__container:hover .Header__dropdown__item{
+
+.Header__dropdown__container:hover .Header__dropdown__item {
   visibility: visible;
-  opacity:1;
+  opacity: 1;
 }
-.Header__dropdown__item a{
+
+.Header__dropdown__item a {
   display: flex;
   align-items: flex-end;
-  color:var(--red)
+  color: var(--red)
 }
-.Dashboard__container{
+
+.Dashboard__container {
   background-color: var(--white);
-  min-height: 37rem; 
+  min-height: 37rem;
   border-radius: 3rem;
   box-shadow: var(--shadow2);
   display: flex;
@@ -59,7 +65,7 @@ main{
   margin: 0 auto;
 }
 
-.Button--primary{
+.Button--primary {
   background-color: var(--blue);
   color: #fff;
   font-size: 2.4rem;
@@ -71,55 +77,77 @@ main{
   cursor: pointer;
 }
 
-.Input{
+.Button--secondary {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  font-size: 2.4rem;
+  max-width: 39rem;
   width: 100%;
-  margin: 1.4rem 0 1.4rem 0;
+  border-radius: 0.5rem;
+  padding: 1.0rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Input {
+  width: 100%;
+  margin: 0.2rem 0 2rem 0;
   border-radius: 0.5rem;
   padding: 1.0rem;
   font-size: 2.0rem;
   background-color: var(--empty);
   border: solid 2px var(--black);
+}
+
+.Input--icon {
+
   padding-left: 4rem;
 }
 
-.Input__container{
+.Input__container {
   width: 100%;
   position: relative;
 }
-.Input__icon{
+
+.Input__icon {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 1rem;
   transform: translateY(-50%);
 }
 
-.Buttton__back{
+.Buttton__back {
   display: flex;
-  align-items:center;
+  align-items: center;
   font-size: 3rem;
   color: var(--blue);
   font-weight: bold;
   width: fit-content;
-  
-  
-}
-.Buttton__back span:first-child{
-  font-size: 3rem;
-}
-.Buttton__back span:last-child{
-  transition: .3s all ease-in-out;
-  text-decoration: underline;
-  text-decoration-color:transparent ;
-}
-.Buttton__back:hover span:last-child{
-  text-decoration-color:var(--blue);
+
+
 }
 
-.Section--list{
+.Buttton__back span:first-child {
+  font-size: 3rem;
+}
+
+.Buttton__back span:last-child {
+  transition: .3s all ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+}
+
+.Buttton__back:hover span:last-child {
+  text-decoration-color: var(--blue);
+}
+
+.Section--list {
   max-width: 55rem;
   min-height: 80vh;
 }
-.Button__add{
+
+.Button__add {
   width: 90%;
   height: 12rem;
   margin: 3rem auto;
@@ -132,10 +160,80 @@ main{
   font-weight: 500;
   color: var(--blue);
 }
-.Button__add span{
+
+.Button__add span {
   font-size: 5rem;
 }
-.Item__list{
-  overflow-y: scroll; 
+
+.Item__list {
+  overflow-y: scroll;
 }
 
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* transition: .25s all ease-in-out; */
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Modal--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Modal__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 0.5;
+}
+
+.Modal___container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 82rem;
+  background-color: var(--white);
+  z-index: 3;
+  padding: 3rem;
+  border-radius: 2rem;
+  box-shadow: var(--shadow2);
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.Modal___exit {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 3rem;
+  color: var(--blue);
+  font-weight: bold;
+  transition: .3s all ease-in-out;
+}
+
+.Input__label {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.Input__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}

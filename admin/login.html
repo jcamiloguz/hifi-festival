@@ -40,20 +40,23 @@
       </header>
   <main>
       <section  class="Section Dashboard__container">
-        <form action="dashboard.html" class="Login__form">
+        <form  class="Login__form">
             <h1 class="Section__title ">DASHBOARD LOGIN  </h1>
             <span class="Input__container">
-              <input type="text" id="username" placeholder="Username" class="Input" required>
+              <input type="text" id="username" placeholder="Username" class="Input Input--icon " required>
               <i class="material-icons Input__icon">person</i>
             </span>
             <span class="Input__container">
-              <input type="password" id="password" placeholder="Password" class="Input" required>
+              <input type="password" id="password" placeholder="Password" class="Input Input--icon " required>
               <i class="material-icons Input__icon">lock</i>
             </span>
-              <button class="Button--primary" type="submit">LOGIN</button>
+              <button class="Button--primary" type="submit" id="login__button">LOGIN</button>
         </form>
       </section>
   </main>
   <footer></footer>
+  <script type="module" src="../js/global.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+  <script type="module" src="../js/login.js"></script>
 </body>
 </html>

@@ -1,25 +1,18 @@
-const getEl = (el) => document.querySelector(el);
+// Wrapper del query selector -- Para tomar elementos del DOM
+export const getEl = (el) => document.querySelector(el);
 
-const writeLocalStorage = (key, value) => {
-  localStorage.setItem(key, value);
-}
-
-const readLocalStorage = (key) => {
-  return localStorage.getItem(key);
-}
-
-const veryfyLocalStorage = (key) => {
-  if(typeof localStorage !== 'undefined'){
+//Ver si funciona
+export const isLocalStorage = () => {
+  if (typeof localStorage !== "undefined") {
     return true;
   }
   return false;
-}
-
-
-
-export {
-  getEl,
-  writeLocalStorage,
-  readLocalStorage,
-  veryfyLocalStorage
-}
+};
+//Insertar
+export const writeLocalStorage = (key, value) => {
+  localStorage.setItem(key, value);
+};
+//Leer
+export const readLocalStorage = (key) => {
+  return localStorage.getItem(key);
+};

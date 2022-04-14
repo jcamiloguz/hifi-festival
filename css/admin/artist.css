@@ -4,10 +4,11 @@
 @import url(./adminGlobals.css);
 
 
-.Artist__title{
+.Artist__title {
   text-align: left;
 }
-.Artist__item{
+
+.Artist__item {
   width: 90%;
   margin: 3rem auto;
   box-shadow: var(--shadow2);
@@ -17,7 +18,8 @@
   color: var(--black);
   overflow: hidden;
 }
-.Artist__item__img{
+
+.Artist__item__img {
   aspect-ratio: 1/1;
   background-color: var(--empty);
   overflow: hidden;
@@ -25,26 +27,30 @@
   object-fit: cover;
 
 }
-.Artist__item__info{
+
+.Artist__item__info {
   width: 50%;
   list-style-type: none;
   padding: 1rem 1rem;
 }
-.Artist__item__title{
-    font-size: 3.2rem;
-    font-weight: 600;
-}
-.Artist__item__genere{
-    font-size: 2rem;
-}
-.Artist__item__description{
-    font-size: 2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+.Artist__item__title {
+  font-size: 3.2rem;
+  font-weight: 600;
 }
 
-.Artist__item__icons{
+.Artist__item__genere {
+  font-size: 2rem;
+}
+
+.Artist__item__description {
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Artist__item__icons {
   width: 25%;
   display: flex;
   justify-content: space-around;
@@ -52,14 +58,46 @@
   margin-right: 10px;
 
 }
-.Artist__item__icons span{
-    font-size: 3.5rem;
-    cursor: pointer;
+
+.Artist__item__icons span {
+  font-size: 3.5rem;
+  cursor: pointer;
 }
-.Artist__item__edit{
+
+.Artist__item__edit {
   color: var(--blue);
 }
-.Artist__item__delete{
+
+.Artist__item__delete {
   color: var(--red);
 }
 
+.Image__container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 4rem;
+  width: 100%;
+}
+
+.image__viewer {
+  border-radius: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  box-shadow: var(--shadow2);
+}
+
+::-webkit-file-upload-button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  font-size: 2.4rem;
+  max-width: 39rem;
+  width: 50%;
+  border-radius: 0.5rem;
+  padding: 1.0rem;
+  font-weight: bold;
+  cursor: pointer;
+}
