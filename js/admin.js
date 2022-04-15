@@ -1,7 +1,7 @@
-import { readLocalStorage, writeLocalStorage } from "./global.js";
+import { crypt, readLocalStorage, writeLocalStorage } from "./global.js";
 
 const USERNAME = "admin";
-const PASSWORD = "12345";
+const PASSWORD = "2724252223";
 
 export const isLogged = () => {
   if (readLocalStorage("logged") === "true") {
@@ -13,7 +13,9 @@ export const isLogged = () => {
 };
 
 export const login = (username, password) => {
-  if (username === USERNAME && password === PASSWORD) {
+  const cryptedPassword = crypt(password);
+  console.info(`Password:${password} cryptedPassword: ${cryptedPassword}`);
+  if (username === USERNAME && cryptedPassword === PASSWORD) {
     writeLocalStorage("logged", "true");
     return true;
   }

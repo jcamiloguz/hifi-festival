@@ -1,11 +1,11 @@
-@import url(./globals.css);
-@import url(./header.css);
-@import url(./footer.css);
-@import url(./animations/pulse.css);
-@import url(./animations/circle.css);
+@import url(../globals.css);
+@import url(../header.css);
+@import url(../footer.css);
+@import url(../animations/pulse.css);
+@import url(../animations/circle.css);
 
 
-.Hero{
+.Hero {
   max-width: 100%;
   width: 100%;
   position: relative;
@@ -13,16 +13,19 @@
   overflow: hidden;
   margin: 0 auto;
 }
-.Hero__background{
+
+.Hero__background {
   width: 100%;
   position: absolute;
   z-index: 0;
 
 }
-.Hero__background video{
+
+.Hero__background video {
   width: 100%;
-} 
-.Hero__info{
+}
+
+.Hero__info {
   height: 100%;
   width: 100%;
   display: flex;
@@ -32,8 +35,8 @@
   z-index: 1;
 }
 
-.Hero__title{
-  font-size:9.6rem ;
+.Hero__title {
+  font-size: 9.6rem;
   line-height: 75.5%;
   z-index: 1;
   font-weight: 900;
@@ -46,7 +49,7 @@
   margin-right: 1px;
   width: 60px;
   height: 1px;
-  bottom:-70px;
+  bottom: -70px;
   overflow: hidden;
   background: var(--white);
   color: transparent;
@@ -55,7 +58,7 @@
   animation-iteration-count: infinite;
 }
 
-.Section__list{
+.Section__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 75%;
@@ -63,28 +66,33 @@
   font-size: 1.8rem;
   row-gap: 20px;
 }
-.Section__Map{
+
+.Section__Map {
   width: 100%;
   height: 300px;
   box-shadow: var(--shadow2);
 
-margin-top: 25px;
+  margin-top: 25px;
 }
-.Section__Map iframe{
+
+.Section__Map iframe {
   width: 100%;
   height: 100%;
 }
-.Slider{
+
+.Slider {
   width: 100%;
   max-width: 100%;
 }
-.Slider__container{
+
+.Slider__container {
   width: 100%;
   position: relative;
   height: 350px;
 }
-.Section__slider{
-  position:absolute;
+
+.Section__slider {
+  position: absolute;
   right: 50%;
   transform: translateX(50%);
   transition: 450ms -webkit-transform;
@@ -96,7 +104,8 @@ margin-top: 25px;
   padding-bottom: 10px;
 
 }
-.Slider__item{
+
+.Slider__item {
 
 
   display: inline-block;
@@ -106,19 +115,21 @@ margin-top: 25px;
   transform-origin: center left;
 }
 
-.Slider__img  {
+.Slider__img {
   width: 160px;
   border-radius: 49px;
   overflow: hidden;
   box-shadow: var(--shadow2);
   aspect-ratio: 1/1;
 }
-.Slider__text{
+
+.Slider__text {
   margin: 10px auto;
   font-weight: 600;
   text-align: center;
   font-size: 2.4rem;
 }
+
 .Section__slider:hover .Slider__item {
   opacity: 0.3;
 }
@@ -128,34 +139,39 @@ margin-top: 25px;
   transform: scale(1.5);
   opacity: 1;
 }
-.Slider__item:hover ~ .Slider__item {
+
+.Slider__item:hover~.Slider__item {
   -webkit-transform: translate3d(100px, 0, 0);
   transform: translate3d(100px, 0, 0);
 }
-.Slider .Section__subtitle{
+
+.Slider .Section__subtitle {
   text-align: center;
   font-weight: 600;
   font-size: 3.2rem;
 }
-.Slider .Section__list{
+
+.Slider .Section__list {
   font-size: 1.8rem;
   font-size: 400;
   max-width: 400px;
   text-align: center;
   list-style: none;
 }
-.Playlist__container{
-  margin:  100px auto;
+
+.Playlist__container {
+  margin: 100px auto;
   position: relative;
 }
-.PlayList{
+
+.PlayList {
   max-width: 400px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.Playlist__animation{
+.Playlist__animation {
   border-radius: 50%;
   background-color: #2FD766;
   width: 600px;
@@ -168,98 +184,108 @@ margin-top: 25px;
   opacity: 0;
   animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
 }
-.circle2{
+
+.circle2 {
   animation: scaleIn 4s 0.15s infinite cubic-bezier(.36, .11, .89, .32);
 }
-.Princing__container{
+
+.Princing__container {
   display: flex;
   justify-content: space-between;
   margin: 40px auto;
 }
-.Pricing__item{
-background-color: var(--white);
-box-shadow: var(--shadow2);
-border-radius: 25px;
-padding: 20px 30px ;
-height: 300px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-width: 300px;
+
+.Pricing__item {
+  background-color: var(--white);
+  box-shadow: var(--shadow2);
+  border-radius: 25px;
+  padding: 20px 30px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
 
 
 }
-.Pricing__title{
+
+.Pricing__title {
   font-size: 3.6rem;
   font-weight: 600;
   text-align: center;
 }
-.Pricing__text{
+
+.Pricing__text {
   font-size: 2.4rem;
 }
 
-.Pricing__price{
+.Pricing__price {
   font-size: 3.6rem;
   font-weight: 600;
   text-align: center;
 
 }
-.Pricing{
+
+.Pricing {
   max-width: 100%;
   width: 1200px;
 }
-.Form__container{
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: var(--white);
-  box-shadow: var(--shadow2);
-  padding: 40px 100px;
-  margin:10px;
-  border-radius: 25px;
-display: grid;
-grid-template-columns: 1fr 1fr;
+
+.Form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
-.Form__label{
+
+.Form__label {
   font-size: 2.8rem;
   /* display: block; */
   text-align: left;
 
 }
-.Form__intput ,.Form__select{
+
+.Form__intput, .Form__select {
   /* display: block; */
   font-size: 2.4rem;
   border-bottom: solid 2px var(--black);
 }
-.Form__intput:focus ,.Form__select:focus{
-  border:none;
+
+.Form__intput:focus, .Form__select:focus {
+  border: none;
   border-bottom: solid 2px #2FD766;
-} 
-.Form__buttom{
-width: 400px;
-margin: 0 auto;
-font-size: 3.2rem;
-font-weight: 600;
-border-radius: 15px;
-padding: 5px;
-border: solid 2px var(--black);
-transition: all .2s;
-grid-column-start: 1  ;
-grid-column-end: -1 ;
-margin-top: 40px;
 }
-.Form__buttom:hover{
+
+.Form__buttom {
+  width: 400px;
+  margin: 0 auto;
+  font-size: 3.2rem;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 5px;
+  border: solid 2px var(--black);
+  transition: all .2s;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-top: 40px;
+}
+
+.Form__buttom:hover {
   background-color: var(--black);
   color: var(--white);
 }
-.Sponsor .Slider__img{
-background-color: transparent;
-box-shadow: none;
-border-radius: 0;
-width: 120px;
+
+.Sponsor .Slider__img {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  width: 120px;
 }
-.Sponsor{
+
+.Sponsor {
   max-width: 90%;
 }
-.Sponsor .Slider__container{
-  overflow-x:scroll;
+
+.Sponsor .Slider__container {
+  overflow-x: scroll;
 }

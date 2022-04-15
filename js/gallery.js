@@ -1,12 +1,13 @@
+import { Photo, getPhotos } from "./class/photo.js";
 import { getEl, getEls, writeLocalStorage } from "./global.js";
-import { getPhotos, photo } from "./class/photo.js";
 import { isLogged, logout } from "./admin.js";
 
 import { galleryItem } from "./templates/gallery.js";
 
+const EMPTY_IMAGE = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs";
+
 //Modal
-const modalAdd = getEl(".Modal--add");
-const modalEdit = getEl(".Modal--edit");
+const modal = getEl(".Modal--add");
 //Button
 const buttonLogout = getEl("#logout");
 const buttonAdd = getEl(".Button__add");
@@ -16,6 +17,9 @@ const inputImage = getEl("#image");
 const inputTitle = getEl("#name");
 const inputDescription = getEl("#description");
 const buttonAddPhoto = getEl("#btnAddPhoto");
+const buttonEditPhoto = getEl("#btnEditPhoto");
+const modalTitle = getEl(".Modal .Section__title");
+
 //Output de la imagen
 const canvas = getEl("#canvas");
 //Output de la lista de fotos creadas por el admin
@@ -27,15 +31,23 @@ const renderPhoto = () => {
   console.log(photos);
   galerryList.innerHTML = photos.map((photo) => galleryItem(photo)).join("");
   const buttonsDeletPhoto = Array.from(getEls(".Gallery__item__delete"));
+  const buttonsEditPhoto = Array.from(getEls(".Gallery__item__edit"));
+
   buttonsDeletPhoto.map((button) => {
     button.addEventListener("click", (e) => {
       const id = e.target.attributes["data-id"].value;
       deletePhoto(id);
     });
   });
+  buttonsEditPhoto.map((button) => {
+    button.addEventListener("click", (e) => {
+      const id = e.target.attributes["data-id"].value;
+      openModalEdit(id);
+    });
+  });
 };
 
-//Add artist to localStorage
+//Add Photo to localStorage
 const addPhoto = async () => {
   if (
     //si todos los values son true, es decir si los ingreso
@@ -43,15 +55,15 @@ const addPhoto = async () => {
     inputTitle.value &&
     inputDescription.value
   ) {
-    const Photo = new photo(
+    const photo = new Photo(
       inputTitle.value,
       inputDescription.value,
       await getImage(inputImage)
     );
-    Photo.savePhoto();
+    photo.savePhoto();
     renderPhoto();
 
-    modalAdd.classList.remove("Modal--active");
+    modal.classList.remove("Modal--active");
     canvas.src = "";
     inputImage.value = "";
     inputTitle.value = "";
@@ -88,6 +100,46 @@ export const deletePhoto = (id) => {
   renderPhoto();
 };
 
+const openModalEdit = (id) => {
+  modal.classList.add("Modal--active");
+  modalTitle.innerHTML = "EDIT PHOTO";
+  buttonEditPhoto.classList.remove("hidden");
+  buttonAddPhoto.classList.add("hidden");
+  const photos = getPhotos();
+  const photo = photos.find((photo) => photo.id === id);
+  displayImage(canvas, photo.image);
+  inputTitle.value = photo.title;
+  inputDescription.value = photo.description;
+  buttonEditPhoto.addEventListener("click", function handler(e) {
+    e.preventDefault();
+    editPhoto(id);
+    this.removeEventListener("click", handler);
+  });
+};
+
+const editPhoto = async (id) => {
+  console.log(inputTitle.value && inputDescription.value);
+  if (inputTitle.value && inputDescription.value) {
+    let image;
+    if (inputImage.value) {
+      image = await getImage(inputImage);
+    } else {
+      image = canvas.src;
+    }
+    const photo = new Photo(inputTitle.value, inputDescription.value, image);
+    photo.update(id);
+    renderPhoto();
+
+    modal.classList.remove("Modal--active");
+    canvas.src = "";
+    inputImage.value = "";
+    inputTitle.value = "";
+    inputDescription.value = "";
+  } else {
+    alert("Please fill all fields");
+  }
+};
+
 if (!isLogged()) {
   window.location.href = "./login.html";
 }
@@ -100,12 +152,19 @@ buttonLogout.addEventListener("click", (e) => {
 
 buttonAdd.addEventListener("click", (e) => {
   e.preventDefault();
-  modalAdd.classList.add("Modal--active");
+  modal.classList.add("Modal--active");
+  buttonAddPhoto.classList.remove("hidden");
+  buttonEditPhoto.classList.add("hidden");
+  //clean form
+  displayImage(canvas, EMPTY_IMAGE);
+  inputImage.value = "";
+  inputTitle.value = "";
+  inputDescription.value = "";
 });
 
 modalClose.addEventListener("click", (e) => {
   e.preventDefault();
-  modalAdd.classList.remove("Modal--active");
+  modal.classList.remove("Modal--active");
 });
 
 inputImage.addEventListener("change", async (e) => {

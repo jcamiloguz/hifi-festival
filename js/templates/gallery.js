@@ -11,7 +11,7 @@ export const galleryItem = ({ title, description, image, id }) => `
                 ${title}
               </p>
               <div class="Gallery__item__icons">
-                <span class="material-icons Gallery__item__edit"> edit </span>
+                <span class="material-icons Gallery__item__edit" data-id="${id}"> edit </span>
                 <span class="material-icons Gallery__item__delete" data-id="${id}">
                   delete
                 </span>

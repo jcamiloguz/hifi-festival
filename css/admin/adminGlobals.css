@@ -59,7 +59,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem;
+  padding: 6rem 1rem;
   max-width: 67rem;
   width: 100%;
   margin: 0 auto;
@@ -145,6 +145,9 @@ main {
 .Section--list {
   max-width: 55rem;
   min-height: 80vh;
+  max-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
 }
 
 .Button__add {
