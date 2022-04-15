@@ -1,0 +1,43 @@
+@import url(../globals.css);
+@import url(../header.css);
+@import url(../footer.css);
+@import url(../animations/pulse.css);
+@import url(../animations/circle.css);
+@import url(../pages/index.css);
+
+.Hero__title {
+  margin-top: 30rem;
+}
+
+.Image__background {
+  width: 100%;
+  object-fit: cover;
+}
+
+.Photo__gallery {
+  position: relative;
+  width: 100%;
+  /* height: 200px; */
+  margin: 0 auto;
+  background-color: red;
+  display: flex;
+  justify-content: space-around;
+  /* right: 50%; */
+  /* top: -5rem; */
+
+}
+
+.Photo__wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  top: -5rem;
+  width: 100%;
+}
+
+.Photo__container {
+  width: 30rem;
+  height: 30rem;
+  justify-content: center;
+  background-color: aqua;
+}

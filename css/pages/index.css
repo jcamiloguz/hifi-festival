@@ -5,43 +5,6 @@
 @import url(../animations/circle.css);
 
 
-.Hero {
-  max-width: 100%;
-  width: 100%;
-  position: relative;
-  height: 600px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.Hero__background {
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-
-}
-
-.Hero__background video {
-  width: 100%;
-}
-
-.Hero__info {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  z-index: 1;
-}
-
-.Hero__title {
-  font-size: 9.6rem;
-  line-height: 75.5%;
-  z-index: 1;
-  font-weight: 900;
-  text-transform: uppercase;
-}
 
 .Hero__animation .bar {
   display: inline-block;
@@ -189,6 +152,44 @@
   animation: scaleIn 4s 0.15s infinite cubic-bezier(.36, .11, .89, .32);
 }
 
+
+.Form__trivia {
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.Trivia__row {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Input__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: auto;
+}
+
+.Trivia--button {
+  margin: auto;
+  width: 300px;
+  font-size: 3.2rem;
+  font-weight: 600;
+  padding: 1.2rem;
+  margin-top: 28px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  cursor: pointer;
+  background-color: #1B4D97;
+  color: var(--white);
+}
+
+
+
+
 .Princing__container {
   display: flex;
   justify-content: space-between;
@@ -235,25 +236,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-.Form__label {
-  font-size: 2.8rem;
-  /* display: block; */
-  text-align: left;
-
-}
 
 .Form__intput, .Form__select {
   /* display: block; */
+  border-radius: 0.4rem;
+  padding: 1.2rem;
+  background-color: var(--empty);
   font-size: 2.4rem;
-  border-bottom: solid 2px var(--black);
+  border: solid 2px var(--black);
 }
 
 .Form__intput:focus, .Form__select:focus {
   border: none;
-  border-bottom: solid 2px #2FD766;
+  border: solid 2px #1B4D97;
 }
 
 .Form__buttom {
@@ -261,13 +258,13 @@
   margin: 0 auto;
   font-size: 3.2rem;
   font-weight: 600;
-  border-radius: 15px;
-  padding: 5px;
-  border: solid 2px var(--black);
+  padding: 1.2rem;
   transition: all .2s;
   grid-column-start: 1;
   grid-column-end: -1;
   margin-top: 40px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  cursor: pointer;
 }
 
 .Form__buttom:hover {
