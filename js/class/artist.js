@@ -1,4 +1,4 @@
-import { readLocalStorage, writeLocalStorage } from "../global.js";
+import { getUniqueId, readLocalStorage, writeLocalStorage } from "../global.js";
 
 export class Artist {
   constructor(name, genre, description, spotify, instagram, image) {
@@ -8,6 +8,7 @@ export class Artist {
     this.spotify = spotify;
     this.instagram = instagram;
     this.image = image;
+    this.id = getUniqueId();
   }
 
   saveArtist() {
@@ -18,10 +19,31 @@ export class Artist {
       spotify: this.spotify,
       instagram: this.instagram,
       image: this.image,
+      id: this.id,
     };
+
     const artists = getArtists();
     artists.push(artist);
     writeLocalStorage("artists", JSON.stringify(artists));
+  }
+  update(id) {
+    const newArtist = {
+      name: this.name,
+      genre: this.genre,
+      description: this.description,
+      spotify: this.spotify,
+      instagram: this.instagram,
+      image: this.image,
+      id: id,
+    };
+    const artists = getArtists();
+    const newArtists = artists.map((artist) => {
+      if (artist.id === id) {
+        return newArtist;
+      }
+      return artist;
+    });
+    writeLocalStorage("artists", JSON.stringify(newArtists));
   }
 }
 

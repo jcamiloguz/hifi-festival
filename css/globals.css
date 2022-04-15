@@ -123,3 +123,7 @@ textarea {
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
+
+.hidden {
+  display: none;
+}

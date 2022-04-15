@@ -121,8 +121,8 @@
         <div class="Button__add">
           <span class="material-icons"> add_circle_outline </span>
         </div>
-        <div class="Item__list">
-          <div class="Gallery__item">
+        <div class="Item__list" id="Gallery__list">
+          <!-- <div class="Gallery__item">
             <img
               class="Gallery__item__img"
               src="https://indiehoy.com/wp-content/uploads/2019/11/wos-la-nueva-generacion-17-noviembre-2019-agus-luna-castro-indie-hoy98.jpg"
@@ -140,9 +140,9 @@
                 </span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
-        <div class="Modal">
+        <div class="Modal Modal--add">
           <div class="Modal__background"></div>
           <div class="Modal___container">
             <div class="Modal___exit">
@@ -151,8 +151,8 @@
             <form class="Input__container" action="">
               <h1 class="Section__title">ADD PHOTO</h1>
               <div class="Image__container">
-                <canvas class="image__viewer"></canvas>
-                <input type="file" class="" name="" id="" />
+                <img class="image__viewer" id="canvas" />
+                <input type="file" class="" name="" id="image" />
               </div>
               <div class="Info__container">
                 <label for="name" class="Input__label">
@@ -164,17 +164,58 @@
                   id="name"
                   placeholder="Festival"
                 />
-                <label for="genere" class="Input__label">
+                <label for="description" class="Input__label">
                   Enter a description of the photo
                 </label>
                 <input
                   type="text"
                   class="Input"
-                  id="genere"
+                  id="description"
                   placeholder="Image of a festival"
                 />
               </div>
-              <button class="Button--primary" type="submit">ADD +</button>
+              <button class="Button--primary" type="submit" id="btnAddPhoto">
+                ADD +
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="Modal Modal--edit">
+          <div class="Modal__background"></div>
+          <div class="Modal___container">
+            <div class="Modal___exit">
+              <span class="material-icons"> close </span>
+            </div>
+            <form class="Input__container" action="">
+              <h1 class="Section__title">EDIT PHOTO</h1>
+              <div class="Image__container">
+                <img class="image__viewer" id="canvas" />
+                <input type="file" class="" name="" id="image" />
+              </div>
+              <div class="Info__container">
+                <label for="name" class="Input__label">
+                  Enter the title of the photo
+                </label>
+                <input
+                  type="text"
+                  class="Input"
+                  id="name"
+                  placeholder="Festival"
+                />
+                <label for="description" class="Input__label">
+                  Enter a description of the photo
+                </label>
+                <input
+                  type="text"
+                  class="Input"
+                  id="description"
+                  placeholder="Image of a festival"
+                />
+              </div>
+              <button class="Button--primary" type="submit" id="btnEditPhoto">
+                ADD +
+              </button>
             </form>
           </div>
         </div>
@@ -182,6 +223,7 @@
     </main>
     <script type="module" src="../js/global.js"></script>
     <script type="module" src="../js/admin.js"></script>
+    <script type="module" src="../js/templates/gallery.js"></script>
     <script type="module" src="../js/gallery.js"></script>
   </body>
 </html>

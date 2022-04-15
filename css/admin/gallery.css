@@ -67,6 +67,7 @@
   aspect-ratio: 16/9;
   margin-bottom: 1.8rem;
   box-shadow: var(--shadow2);
+  object-fit: cover;
 }
 
 ::-webkit-file-upload-button {
