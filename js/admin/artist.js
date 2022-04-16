@@ -1,8 +1,8 @@
-import { Artist, getArtists } from "./class/artist.js";
-import { getEl, getEls, writeLocalStorage } from "./global.js";
+import { Artist, getArtists } from "../class/artist.js";
+import { getEl, getEls, writeLocalStorage } from "../global.js";
 import { isLogged, logout } from "./admin.js";
 
-import { artistItem } from "./templates/artistItem.js";
+import { artistItem } from "../templates/admin.js";
 
 const EMPTY_IMAGE = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs";
 

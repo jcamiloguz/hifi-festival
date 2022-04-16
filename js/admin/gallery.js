@@ -1,8 +1,8 @@
-import { Photo, getPhotos } from "./class/photo.js";
-import { getEl, getEls, writeLocalStorage } from "./global.js";
+import { Photo, getPhotos } from "../class/photo.js";
+import { getEl, getEls, writeLocalStorage } from "../global.js";
 import { isLogged, logout } from "./admin.js";
 
-import { galleryItem } from "./templates/gallery.js";
+import { galleryItem } from "../templates/admin.js";
 
 const EMPTY_IMAGE = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs";
 

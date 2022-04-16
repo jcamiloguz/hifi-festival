@@ -1,4 +1,4 @@
-import { crypt, readLocalStorage, writeLocalStorage } from "./global.js";
+import { crypt, readLocalStorage, writeLocalStorage } from "../global.js";
 
 const USERNAME = "admin";
 const PASSWORD = "2724252223";

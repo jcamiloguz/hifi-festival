@@ -1,6 +1,6 @@
 import { isLogged, logout } from "./admin.js";
 
-import { getEl } from "./global.js";
+import { getEl } from "../global.js";
 
 const button = getEl("#logout");
 

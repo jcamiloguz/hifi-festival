@@ -1,3 +1,4 @@
+import { initialState } from "./initialState.js";
 // Wrapper del query selector -- Para tomar elementos del DOM
 export const getEl = (el) => document.querySelector(el);
 export const getEls = (el) => document.querySelectorAll(el);
@@ -51,6 +52,17 @@ export const decrypt = (encoded) => {
     .join("");
 };
 
+const loadInitialState = () => {
+  if (readLocalStorage("state") === "true") {
+    console.log("Is already loaded");
+    return true;
+  } else {
+    writeLocalStorage("artists", JSON.stringify(initialState()));
+    writeLocalStorage("state", "true");
+    return false;
+  }
+};
+
 window.addEventListener(
   "keydown",
   function (e) {
@@ -67,3 +79,5 @@ window.addEventListener(
   },
   true
 );
+
+loadInitialState();

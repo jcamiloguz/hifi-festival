@@ -1,4 +1,4 @@
-import { getEl, isLocalStorage } from "./global.js";
+import { getEl, isLocalStorage } from "../global.js";
 import { isLogged, login } from "./admin.js";
 
 const username = getEl("#username");
