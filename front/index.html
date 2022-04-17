@@ -78,12 +78,12 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <title>Hi-Fi Festival</title>
-    <link rel="stylesheet" href="../css/pages/index.css" />
+    <link rel="stylesheet" href="../css/front/index.css" />
   </head>
 
   <body>
     <header class="Header">
-      <a class="Header__logo" href="/pages/index.html">
+      <a class="Header__logo" href="/front/index.html">
         <img
           class="logo__img"
           src="../assets/images/logo.svg"
@@ -174,7 +174,7 @@
       <section class="Section Slider" id="artist">
         <h2 class="Section__title">Our Artists</h2>
         <div class="Slider__container">
-          <div class="Section__slider">
+          <div class="Section__slider Section__slider--artists">
             <div class="Slider__item">
               <img
                 src="../assets/images/artists/kanye.jpeg"
@@ -421,5 +421,10 @@
         >
       </h3>
     </footer>
+    <script type="module" src="../js/initialState.js"></script>
+    <script type="module" src="../js/global.js"></script>
+    <script type="module" src="../js/class/artist.js"></script>
+    <script type="module" src="../js/templates/front.js"></script>
+    <script type="module" src="../js/front/index.js"></script>
   </body>
 </html>

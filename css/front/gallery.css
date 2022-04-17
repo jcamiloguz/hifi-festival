@@ -3,7 +3,7 @@
 @import url(../footer.css);
 @import url(../animations/pulse.css);
 @import url(../animations/circle.css);
-@import url(../pages/index.css);
+@import url(../front/index.css);
 
 .Hero__title {
   margin-top: 30rem;

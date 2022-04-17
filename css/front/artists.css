@@ -62,6 +62,18 @@
 
 }
 
+.Artist__wrapper::-webkit-scrollbar {
+  background: #e1e1e1;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.Artist__wrapper::-webkit-scrollbar-thumb:hover,
+.Artist__wrapper::-webkit-scrollbar-thumb:active {
+  background: var(--black);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .Artist__item--wrapper {
   display: flex;
   justify-content: center;
