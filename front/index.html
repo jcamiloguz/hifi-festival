@@ -79,8 +79,12 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Hi-Fi Festival</title>
     <link rel="stylesheet" href="../css/front/index.css" />
-  </head>
 
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <header class="Header">
       <a class="Header__logo" href="/front/index.html">
@@ -272,6 +276,68 @@
             <button type="submit" class="Trivia--button">START</button>
           </div>
         </form>
+        <form action="" class="Form__slider">
+          <div class="Question__container">
+            <h1 class="Question__title">Is Mac Miller the greates artist?</h1>
+            <button class="Answer__container">
+              <span class="Option">a</span>
+              <p class="Answer">Yes</p>
+            </button>
+            <button class="Answer__container">
+              <span class="Option">b</span>
+              <p class="Answer">Maybe</p>
+            </button>
+            <button class="Answer__container">
+              <span class="Option">c</span>
+              <p class="Answer">No</p>
+            </button>
+          </div>
+        </form>
+        <div class="Result__container Congratulations">
+          <div class="puto">
+            <h1 class="Section__title">CONGRATULATIONS</h1>
+            <div class="Code__container">
+              <p>USE CODE: <strong>BEST10</strong></p>
+              <span class="material-icons icon--copy"> file_copy </span>
+            </div>
+            <button class="HighScore--button">High Score list</button>
+          </div>
+        </div>
+        <div class="Result__container Sorry">
+          <div class="puto">
+            <h1 class="Section__title">
+              UPS, SORRY <br />
+              BE A BETTER FAN
+            </h1>
+            <button class="HighScore--button Retry--button">Retry</button>
+            <button class="HighScore--button">High Score list</button>
+          </div>
+        </div>
+        <div class="Rankings__container">
+          <h1 class="Section__title">HIGH SCORE LIST</h1>
+          <div class="Ranks__container">
+            <div class="User__container">
+              <div class="User">
+                <span class="material-icons"> person </span>
+                <p>GuzCode</p>
+              </div>
+              <div class="Score">
+                <strong> Score: </strong>
+                <p>10/10</p>
+              </div>
+            </div>
+            <div class="User__container">
+              <div class="User">
+                <span class="material-icons"> person </span>
+                <p>JUAN-BH</p>
+              </div>
+              <div class="Score">
+                <strong>Score:</strong>
+                <p>10/10</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="Section Pricing" id="pricing">
