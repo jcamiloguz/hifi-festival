@@ -17,7 +17,6 @@ main {
   display: flex;
   align-items: center;
   cursor: pointer;
-
 }
 
 .Header__dropdown__label p {
@@ -36,8 +35,7 @@ main {
   z-index: 1;
   right: 0;
   opacity: 0;
-  transition: .25s all ease-in-out;
-
+  transition: 0.25s all ease-in-out;
 }
 
 .Header__dropdown__container:hover .Header__dropdown__item {
@@ -48,7 +46,7 @@ main {
 .Header__dropdown__item a {
   display: flex;
   align-items: flex-end;
-  color: var(--red)
+  color: var(--red);
 }
 
 .Dashboard__container {
@@ -72,7 +70,7 @@ main {
   max-width: 39rem;
   width: 100%;
   border-radius: 0.5rem;
-  padding: 1.0rem;
+  padding: 1rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -85,7 +83,7 @@ main {
   max-width: 39rem;
   width: 100%;
   border-radius: 0.5rem;
-  padding: 1.0rem;
+  padding: 1rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -94,14 +92,13 @@ main {
   width: 100%;
   margin: 0.2rem 0 2rem 0;
   border-radius: 0.5rem;
-  padding: 1.0rem;
-  font-size: 2.0rem;
+  padding: 1rem;
+  font-size: 2rem;
   background-color: var(--empty);
   border: solid 2px var(--black);
 }
 
 .Input--icon {
-
   padding-left: 4rem;
 }
 
@@ -124,8 +121,6 @@ main {
   color: var(--blue);
   font-weight: bold;
   width: fit-content;
-
-
 }
 
 .Buttton__back span:first-child {
@@ -133,7 +128,7 @@ main {
 }
 
 .Buttton__back span:last-child {
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   text-decoration: underline;
   text-decoration-color: transparent;
 }
@@ -178,6 +173,8 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
   /* transition: .25s all ease-in-out; */
   z-index: 2;
   display: grid;
@@ -215,6 +212,8 @@ main {
   position: relative;
   display: flex;
   justify-content: center;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
 .Modal___exit {
@@ -225,7 +224,7 @@ main {
   font-size: 3rem;
   color: var(--blue);
   font-weight: bold;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .Input__label {

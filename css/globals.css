@@ -7,15 +7,14 @@
   --black: #333333;
   --border: #eaeaea;
   --red: #902122;
-  --blue: #1B4D97;
+  --blue: #1b4d97;
   --shadow: inset 0 -1px var(--border);
   --shadow2: 0px 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 * {
@@ -99,7 +98,7 @@ textarea {
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -121,19 +120,18 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
 
 .hidden {
   display: none;
 }
 
-
 .Hero {
   max-width: 100%;
   width: 100%;
   position: relative;
-  height: 600px;
+  height: 820px;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -142,7 +140,6 @@ textarea {
   width: 100%;
   position: absolute;
   z-index: 0;
-
 }
 
 .Hero__background video {
