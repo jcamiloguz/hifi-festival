@@ -1,24 +1,31 @@
-// const Photo__wrapper = document.getElementById("Photo__wrapper");
-// Photo__wrapper.scrollWidth = 1000;
+import { Photo, getPhotos } from "../class/photo.js";
+import { photoItem, photoBackground } from "../templates/front.js";
+import { getEl, getEls } from "../global.js";
 
-// let pos = { left: 0, x: 0 };
+const photoList = getEl(".Photo__wrapper");
+const photoInfoConainers = getEl(".Hero");
+const photo = getPhotos();
 
-// const mouseDownHandler = function (e) {
-//   pos = {
-//     // The current scroll
-//     left: Photo__wrapper.scrollLeft,
-//     // Get the current mouse position
-//     x: e.clientX,
-//   };
+const renderPhoto = () => {
+  photoList.innerHTML = photo.map((photo) => photoItem(photo)).join("");
+  const photos = Array.from(getEls(".Photo__container"));
+  photos.map((photo) => {
+    photo.addEventListener("click", (e) => {
+      const container = e.target.parentElement;
+      console.log(e.target.parentElement);
+      const id = container.attributes["data-id"].value;
+      console.log(id);
+      showPhoto(id);
+    });
+  });
+  return photo[0].id;
+};
 
-//   document.addEventListener("mousemove", mouseMoveHandler);
-//   document.addEventListener("mouseup", mouseUpHandler);
-// };
+const showPhoto = (id) => {
+  const photoToHero = photo.find((photo) => photo.id === id);
+  console.log(photoToHero);
+  photoInfoConainers.innerHTML = photoBackground(photoToHero);
+};
 
-// const mouseMoveHandler = function (e) {
-//   // How far the mouse has been moved
-//   const dx = e.clientX - pos.x;
-
-//   // Scroll the element
-//   Photo__wrapper.scrollLeft = pos.left - dx;
-// };
+const fistPhotoId = renderPhoto();
+showPhoto(fistPhotoId);

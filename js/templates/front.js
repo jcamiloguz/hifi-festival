@@ -66,3 +66,17 @@ export const photoItem = ({ id, image, description }) => `
 />
 </div>
 `;
+
+export const photoBackground = ({ id, image, title, description }) => `
+
+<div class="Hero__background" data-id="${id}">
+        <img
+          src="${image}"
+          alt="${description}"
+          class="Image__background"
+        />
+      </div>
+      <div class="Hero__info" data-id="${id}">
+        <h1 class="Hero__title">${title}</h1>
+      </div>
+`;

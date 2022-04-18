@@ -1,4 +1,4 @@
-import { initialState } from "./initialState.js";
+import { initialStateArtist, initialStateGallery } from "./initialState.js";
 // Wrapper del query selector -- Para tomar elementos del DOM
 export const getEl = (el) => document.querySelector(el);
 export const getEls = (el) => document.querySelectorAll(el);
@@ -57,7 +57,8 @@ const loadInitialState = () => {
     console.log("Is already loaded");
     return true;
   } else {
-    writeLocalStorage("artists", JSON.stringify(initialState()));
+    writeLocalStorage("artists", JSON.stringify(initialStateArtist()));
+    writeLocalStorage("photos", JSON.stringify(initialStateGallery()));
     writeLocalStorage("state", "true");
     return false;
   }
