@@ -80,3 +80,37 @@ export const photoBackground = ({ id, image, title, description }) => `
         <h1 class="Hero__title">${title}</h1>
       </div>
 `;
+
+export const userScore = (name, score) => `
+
+<div class="User__container">
+              <div class="User">
+                <span class="material-icons"> person </span>
+                <p>${name}</p>
+              </div>
+              <div class="Score">
+                <strong> Score: </strong>
+                <p>${score}/10</p>
+              </div>
+            </div>
+
+`;
+
+export const questionItem = ({ question, options, answer }) => {
+  const abcMap = ["A", "B", "C", "D"];
+  const optionsTemplate = options
+    .map(
+      (option, index) => `<button class="Answer__container" answer="${
+        option === answer
+      }">
+  <span class="Option" answer="${option === answer}"> ${abcMap[index]}</span>
+  <p class="Answer"answer="${option === answer}" >${option}</p>
+</button>
+`
+    )
+    .join("");
+
+  return `<h1 class="Question__title">${question}</h1>
+ ${optionsTemplate}           
+`;
+};

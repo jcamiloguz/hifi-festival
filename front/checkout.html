@@ -209,15 +209,17 @@
             <h2 class="Billing__subtitle">3 X PLATINUM</h2>
             <input
               type="text"
-              class="Form__billingIntput"
+              class="Form__billingIntput cupon__input"
               placeholder="Add discount code"
+              oninput="discount()"
             />
             <div class="Total__container">
-              <p class="Total">TOTAL: <span></span></p>
+              <p class="Total">TOTAL: <span class="totalPagar"></span></p>
             </div>
           </div>
         </aside>
       </section>
     </main>
+    <script type="module" src="../js/front/checkout.js"></script>
   </body>
 </html>
