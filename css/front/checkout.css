@@ -1,13 +1,7 @@
 @import url(../globals.css);
 @import url(../header.css);
 @import url(../front/index.css);
-
-/* .Header {
-  position: inherit;
-} */
-/* main {
-  height: calc(100vh - 60px);
-} */
+/* @import url(../admin/adminGlobals.css); */
 
 .Checkout_container {
   display: flex;
@@ -70,14 +64,6 @@
   margin: 1rem 0;
 }
 
-/* .monthInput {
-  border-radius: 0.4rem;
-  padding: 2.2rem;
-  background-color: var(--empty);
-  font-size: 2.4rem;
-  border: solid 2px var(--black);
-  margin: 1rem 0;
-} */
 .CI_input {
   width: 45%;
 }
@@ -122,4 +108,55 @@
 .Total {
   font-size: 2.4rem;
   font-weight: 600;
+}
+
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  /* overflow-y: scroll; */
+  /* transition: .25s all ease-in-out; */
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Modal--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Modal__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 0.5;
+}
+
+.Modal___container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 82rem;
+  height: 50%;
+  max-height: 100vh;
+  background-color: var(--white);
+  z-index: 3;
+  padding: 3rem;
+  border-radius: 2rem;
+  box-shadow: var(--shadow2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
