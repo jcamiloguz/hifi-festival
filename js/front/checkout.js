@@ -7,6 +7,9 @@ const tickets = getEl(".tickets");
 const ticketsType = getEl(".ticketsType");
 const modal = getEl(".Modal");
 const placeOrder = getEl(".placeOrder");
+const discountButton = getEl(".Form__billingButton");
+
+let isDiscountAplied = false;
 
 window.addEventListener("load", () => {
   const params = new URL(document.location).searchParams;
@@ -27,16 +30,20 @@ window.addEventListener("load", () => {
     console.log(totalNoDiscount);
   }
 
-  cuponInput.addEventListener("input", discount);
+  discountButton.addEventListener("click", discount);
+
   function discount() {
-    const cupon = cuponInput.value;
-    if (cupon === "BEST10") {
+    const cupon = cuponInput.value.toUpperCase();
+    console.log(cupon);
+
+    if (cupon === "BEST10" && isDiscountAplied === false) {
       console.log(total.innerHTML);
-      const totalDescuento = (total.innerHTML * (100 - 10)) / 100;
+      const totalDescuento = (total.innerHTML * (100 - 50)) / 100;
       console.log(totalDescuento);
       total.innerHTML = totalDescuento;
+      isDiscountAplied = true;
     } else {
-      total.innerHTML = totalNoDiscount;
+      // total.innerHTML = totalNoDiscount;
     }
   }
 });

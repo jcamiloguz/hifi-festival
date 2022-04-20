@@ -160,3 +160,13 @@
   align-items: center;
   justify-content: space-around;
 }
+
+.Form__billingButton {
+  font-size: 2rem;
+  max-width: 39rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto;
+}

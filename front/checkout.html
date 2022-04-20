@@ -206,11 +206,20 @@
             <h2 class="Billing__subtitle">
               <span class="tickets"></span> X <span class="ticketsType"></span>
             </h2>
-            <input
-              type="text"
-              class="Form__billingIntput cupon__input"
-              placeholder="Add discount code"
-            />
+            <div class="Code__continer">
+              <input
+                type="text"
+                class="Form__billingIntput cupon__input"
+                placeholder="Add discount code"
+              />
+              <button
+                class="Form__billingButton"
+                type="submit"
+                style="display: inline-block"
+              >
+                APPLY
+              </button>
+            </div>
             <div class="Total__container">
               <p class="Total">TOTAL: <span class="totalPagar"></span></p>
             </div>
@@ -232,6 +241,5 @@
       </section>
     </main>
     <script defer type="module" src="../js/front/checkout.js"></script>
-    <script defer type="module" src="../js/front/index.js"></script>
   </body>
 </html>
