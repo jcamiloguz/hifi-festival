@@ -49,8 +49,8 @@ const renderQuestions = (trivia) => {
   questionTriviaContainer.innerHTML = questionItem(
     trivia.questions[trivia.score]
   );
-  progressBar.value = trivia.score;
-  progressLabel.innerHTML = trivia.score;
+  progressBar.value = trivia.score + 1;
+  progressLabel.innerHTML = trivia.score + 1;
 
   const answers = Array.from(getEls(".Answer__container "));
 
@@ -100,6 +100,8 @@ codeContainer.addEventListener("mouseout", () => {
 const renderCongratulations = (trivia) => {
   congratulationTriviaContainer.classList.remove("hidden");
   questionTriviaContainer.classList.add("hidden");
+  tittleProgressBar.classList.add("hidden");
+  progressBar.classList.add("hidden");
   ranksButtonCongrat.addEventListener("click", () => {
     renderRanklist(trivia);
   });
@@ -108,6 +110,7 @@ const renderCongratulations = (trivia) => {
 const renderFailed = () => {
   questionTriviaContainer.classList.add("hidden");
   failedTriviaContainer.classList.remove("hidden");
+  tittleProgressBar.classList.add("hidden");
   progressBar.classList.add("hidden");
 };
 
@@ -115,6 +118,8 @@ const renderRanklist = (trivia) => {
   console.log("da");
   congratulationTriviaContainer.classList.add("hidden");
   failedTriviaContainer.classList.add("hidden");
+  tittleProgressBar.classList.add("hidden");
+  progressBar.classList.add("hidden");
   ranksContainer.classList.remove("hidden");
   ranksList.innerHTML = trivia.getHighScore().map((item) => {
     return userScore(item.name, item.score);

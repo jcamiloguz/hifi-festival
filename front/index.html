@@ -312,20 +312,41 @@
         <form action="checkout.html" class="Form__container">
           <h2 class="Section__title">Buy your tickets</h2>
           <div class="Princing__container">
-            <div class="Pricing__item">
+            <input
+              type="radio"
+              class="radio__input"
+              name="pricing"
+              id="standard"
+              value="Standard"
+            />
+            <label class="Pricing__item" for="standard">
               <h3 class="Pricing__title">Standard</h3>
               <p class="Pricing__text">All stages access</p>
               <h3 class="Pricing__price">$200usd</h3>
-            </div>
-            <div class="Pricing__item">
+            </label>
+            <input
+              type="radio"
+              class="radio__input"
+              name="pricing"
+              id="vip"
+              value="VIP"
+            />
+            <label class="Pricing__item" for="vip">
               <h3 class="Pricing__title">VIP</h3>
               <div class="Pricing__info">
                 <p class="Pricing__text">All stages access</p>
                 <p class="Pricing__text">Exclusive front seats</p>
               </div>
               <h3 class="Pricing__price">$500usd</h3>
-            </div>
-            <div class="Pricing__item">
+            </label>
+            <input
+              type="radio"
+              class="radio__input"
+              name="pricing"
+              id="platinum"
+              value="Platinium"
+            />
+            <label class="Pricing__item" for="platinum">
               <h3 class="Pricing__title">Platinium</h3>
               <div class="Pricing__info">
                 <p class="Pricing__text">All stages access</p>
@@ -335,13 +356,14 @@
                 </p>
               </div>
               <h3 class="Pricing__price">$900usd</h3>
-            </div>
+            </label>
           </div>
           <input
             type="text"
             list="cantidad"
             placeholder="Amount of tickets"
             class="Form__intput"
+            name="tickets"
             required
           />
           <datalist id="cantidad">

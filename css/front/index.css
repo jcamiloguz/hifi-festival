@@ -98,7 +98,7 @@
   opacity: 1;
 }
 
-.Slider__item:hover~.Slider__item {
+.Slider__item:hover ~ .Slider__item {
   -webkit-transform: translate3d(100px, 0, 0);
   transform: translate3d(100px, 0, 0);
 }
@@ -217,12 +217,12 @@
 
 .Answer--correct {
   color: var(--white);
-  background-color: #439D4C;
+  background-color: #439d4c;
 }
 
 .Answer--incorrect {
   color: var(--white);
-  background-color: #B14848;
+  background-color: #b14848;
 }
 
 .Option {
@@ -252,8 +252,6 @@
   align-items: center;
   /* background-color: antiquewhite; */
 }
-
-
 
 .Code__container {
   border-radius: 0 1.8rem 1.8rem 0;
@@ -330,7 +328,7 @@
 }
 
 .Retry--button {
-  margin-top: 80px;
+  margin-top: 28px;
 }
 
 .Rankings__container {
@@ -342,6 +340,7 @@
 }
 
 .Ranks__container {
+  margin-top: 28px;
   width: 100%;
   height: 80%;
   display: flex;
@@ -394,6 +393,14 @@
   margin: 40px auto;
 }
 
+.radio__input {
+  display: none;
+}
+
+.radio__input:checked + .Pricing__item {
+  border: 2px solid var(--blue);
+}
+
 .Pricing__item {
   background-color: var(--white);
   box-shadow: var(--shadow2);
@@ -404,6 +411,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
+  margin: 0 2.4rem;
 }
 
 .Pricing__title {
@@ -487,7 +495,6 @@
   margin-top: 2.5rem;
 }
 
-
 .progress__trivia {
   border-radius: 2.4rem;
   width: 33rem;
@@ -499,7 +506,6 @@
 
 .progress__trivia::-webkit-progress-bar {
   background-color: var(--empty);
-
 }
 
 .progress__trivia::-webkit-progress-value {

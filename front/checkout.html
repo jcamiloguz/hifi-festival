@@ -160,6 +160,8 @@
                 class="Form__billingIntput"
                 required
                 id="credit_card"
+                name="payment"
+                value="Card"
               />
               <span> Credit Card </span>
             </label>
@@ -182,13 +184,6 @@
               class="Form__billingIntput"
               required
               autocomplete
-              placeholder="Year"
-            />
-            <input
-              type="number"
-              class="Form__billingIntput"
-              required
-              autocomplete
               placeholder="Security Code"
             />
             <label for="Paypal" class="Radio_input">
@@ -196,30 +191,47 @@
                 type="radio"
                 class="Form__billingIntput"
                 required
+                name="payment"
                 id="Paypal"
+                value="PayPal"
               />
               <span> PayPal </span>
             </label>
-            <button class="Button--primary">PLACE ORDER</button>
+            <button class="Button--primary placeOrder">PLACE ORDER</button>
           </form>
         </aside>
         <aside class="Summary__container">
           <div class="summary">
             <h1 class="Billing__title">SUMMARY</h1>
-            <h2 class="Billing__subtitle">3 X PLATINUM</h2>
+            <h2 class="Billing__subtitle">
+              <span class="tickets"></span> X <span class="ticketsType"></span>
+            </h2>
             <input
               type="text"
               class="Form__billingIntput cupon__input"
               placeholder="Add discount code"
-              oninput="discount()"
             />
             <div class="Total__container">
               <p class="Total">TOTAL: <span class="totalPagar"></span></p>
             </div>
           </div>
         </aside>
+        <div class="Modal Modal--add">
+          <div class="Modal__background"></div>
+          <div class="Modal___container">
+            <h1 class="Billing__title">THANKS FOR CHOOSING US</h1>
+            <h2 class="Billing__subtitle">
+              YOU WILL RECEIVE AN EMAIL WITH <br />
+              THE INFOMRATION AND THE TICKETS
+            </h2>
+            <a href="/front/index.html"
+              ><button class="Button--primary">MAIN PAGE</button></a
+            >
+          </div>
+        </div>
       </section>
     </main>
-    <script type="module" src="../js/front/checkout.js"></script>
+    <script defer type="module" src="../js/front/checkout.js"></script>
+    <script defer type="module" src="../js/front/index.js"></script>
   </body>
 </html>
