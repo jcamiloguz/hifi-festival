@@ -8,7 +8,9 @@ const ticketsType = getEl(".ticketsType");
 const modal = getEl(".Modal");
 const placeOrder = getEl(".placeOrder");
 const discountButton = getEl(".Form__billingButton");
-
+const inputs = Array.from(
+  getEls(`.billing__info .Form__billingIntput[type="text"]`)
+);
 let isDiscountAplied = false;
 
 window.addEventListener("load", () => {
@@ -49,5 +51,16 @@ window.addEventListener("load", () => {
 });
 
 placeOrder.addEventListener("click", () => {
+  console.log(inputs);
+  let err = false;
+  inputs.map((input) => {
+    console.log(input.value);
+    if (input.value === "") {
+      err = true;
+    }
+  });
+  if (err) {
+    return;
+  }
   modal.classList.add("Modal--active");
 });
